@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="Cords:jar">
+    <output-path>$PROJECT_DIR$/../../Server/plugins</output-path>
+    <root id="archive" name="Cords.jar">
+      <element id="module-output" name="Cords" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../../Deps/spigot-api-1.16.5-R0.1-20210424.223940-54.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>

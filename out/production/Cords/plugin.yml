@@ -1,0 +1,11 @@
+name: CordsAnnouncer
+version: 1.0
+author: dikahdoff
+main: com.dikahdoff.cords.Cords
+api-version: 1.16
+description: Announces your cords to the chat
+commands:
+  cords:
+    description: MainCommand
+    usage: /<command>
+    aliases: [cord,loc,location,pos,position]
