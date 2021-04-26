@@ -1,0 +1,2 @@
+# CordsAnnouncer
+Spigot plugin
