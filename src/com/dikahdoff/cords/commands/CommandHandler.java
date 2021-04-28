@@ -3,10 +3,13 @@ package com.dikahdoff.cords.commands;
 import com.dikahdoff.cords.Cords;
 import org.bukkit.ChatColor;
 import org.bukkit.Location;
+import org.bukkit.World;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
+
+import java.util.Locale;
 
 import static org.bukkit.Bukkit.getServer;
 
@@ -29,7 +32,8 @@ public class CommandHandler implements CommandExecutor {
             } else {
                 if(player.hasPermission("cords.send")) {
                     Location playerLoc = player.getLocation();
-                    getServer().broadcastMessage(ChatColor.BLUE + "> " + ChatColor.GRAY + player.getName() + " is at " + ChatColor.BOLD + Math.round(playerLoc.getX()) + " / " + Math.round(playerLoc.getY()) + " / " + Math.round(playerLoc.getZ()) + "");
+                    World.Environment dimension = player.getWorld().getEnvironment();
+                    getServer().broadcastMessage(ChatColor.BLUE + "> " + ChatColor.GOLD + ChatColor.BOLD + player.getName() + ChatColor.RESET + ChatColor.GRAY + " is at " + ChatColor.BOLD + Math.round(playerLoc.getX()) + " / " + Math.round(playerLoc.getY()) + " / " + Math.round(playerLoc.getZ()) + ((dimension != World.Environment.NORMAL) ? (" (" +  Cords.capitalizeWord(dimension.name().toString().replace("_"," ").toLowerCase(Locale.ROOT)) + ")") : ""));
                 } else {
                     player.sendMessage(ChatColor.RED + "> " + ChatColor.GRAY + "Permission denied.");
                 }

@@ -1,5 +1,5 @@
 name: CordsAnnouncer
-version: 1.0
+version: 1.1
 author: dikahdoff
 main: com.dikahdoff.cords.Cords
 api-version: 1.16
